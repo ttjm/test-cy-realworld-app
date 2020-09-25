@@ -1,0 +1,27 @@
+{
+  "name": "realworld-app-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^1.4.0",
+    "artillery": "^1.6.1",
+    "cypress": "^5.2.0",
+    "cypress-commands": "^1.1.0",
+    "cypress-image-snapshot": "^3.1.1",
+    "faker": "^5.1.0",
+    "newman": "^5.2.0",
+    "newman-reporter-htmlextra": "^1.19.2",
+    "start-server-and-test": "^1.11.4",
+    "wait-on": "^5.2.0"
+  },
+  "scripts": {
+    "wait-on": "npx wait-on http://localhost:3000",
+    "cy:run": "wait-on && cypress run",
+    "cy:open": "npx wait-on http://localhost:3000 && cypress open",
+    "load": "artillery run artillery/cypress-realworld-app-load.yml"
+  },
+  "author": "",
+  "license": "ISC"
+}

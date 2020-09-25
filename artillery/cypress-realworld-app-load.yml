@@ -1,0 +1,10 @@
+config:
+    target: http://localhost:3000
+    environments:
+        dev:
+            target: http://localhost:3000
+        production:
+            target: http://myimpax.org
+scenarios:
+- flow:
+    - log: "Current environment is set to: {{ $environment }}"
